@@ -1,0 +1,4 @@
+.env
+output.html
+node_modules/
+node_modules/*

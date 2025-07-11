@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "ftp": "^0.3.10",
+    "xml2js": "^0.6.2"
+  },
+  "name": "pokemon_tom_standings",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "TOM",
+    "Pokemon"
+  ],
+  "author": "kry008",
+  "license": "CC-BY-NC-ND-4.0",
+  "description": ""
+}
