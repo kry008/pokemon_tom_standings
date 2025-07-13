@@ -40,9 +40,14 @@ function getLatestRound(pods) {
 
 function generateHTML(tournamentName, matchList, playerMap) {
   const rows = matchList.map(match => {
-    const table = match.tablenumber;
-    const p1 = playerMap[match.player1.$.userid] || "???";
-    const p2 = playerMap[match.player2.$.userid] || "???";
+    const table = match.tablenumber ?? "-";
+
+    const p1id = match.player1?.$.userid || match.player?.$.userid || null;
+    const p2id = match.player2?.$.userid || null;
+
+    const p1 = p1id ? (playerMap[p1id] || "???") : "wolny los";
+    const p2 = p2id ? (playerMap[p2id] || "???") : "";
+
     return `<tr><td>${table}</td><td>${p1}</td><td>${p2}</td></tr>`;
   });
 
